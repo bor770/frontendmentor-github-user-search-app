@@ -7,13 +7,14 @@ import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 
 import { DataEffects } from './data/store/data.effects';
+import { LayoutEffects } from './shared/layout/store/layout.effects';
 import { routes } from './app.routes';
 import * as fromRoot from './store/app.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),
-    provideEffects(DataEffects),
+    provideEffects(DataEffects, LayoutEffects),
     provideHttpClient(),
     provideRouter(routes),
     provideStore(fromRoot.appReducer),
