@@ -15,13 +15,13 @@ import * as fromRoot from '../../store/app.reducer';
   templateUrl: './base.component.html',
 })
 export class BaseComponent implements OnInit {
-  theme: Observable<Theme>;
-  width: Observable<Width>;
+  theme$: Observable<Theme>;
+  width$: Observable<Width>;
 
   constructor(public store: Store) {}
 
   ngOnInit(): void {
-    this.theme = this.store.select(fromRoot.selectTheme);
-    this.width = this.store.select(fromRoot.selectLayoutWidth);
+    this.theme$ = this.store.select(fromRoot.selectTheme);
+    this.width$ = this.store.select(fromRoot.selectLayoutWidth);
   }
 }

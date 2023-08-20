@@ -1,1 +1,19 @@
-<p>header works!</p>
+<div
+  *ngrxLet="{ theme: theme$, width: width$ } as observables"
+  class="container"
+  [ngClass]="[observables.theme, observables.width]"
+>
+  <span class="devfinder">devfinder</span>
+  <div
+    class="other-theme"
+    tabindex="0"
+    (click)="onToggleTheme()"
+    (keydown.enter)="onToggleTheme()"
+  >
+    <span class="theme">{{ otherTheme(observables.theme) }}</span>
+    <img
+      [src]="otherThemeImgSrc(observables.theme)"
+      [alt]="otherThemeImgAlt(observables.theme)"
+    />
+  </div>
+</div>

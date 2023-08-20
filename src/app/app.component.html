@@ -1,9 +1,14 @@
-<header>
-  <app-header></app-header>
-</header>
-<main>
-  <app-search></app-search>
-  <article>
-    <app-data></app-data>
-  </article>
-</main>
+<div
+  *ngrxLet="{ theme: theme$, width: width$ } as observables"
+  [ngClass]="[observables.theme, observables.width]"
+>
+  <header>
+    <app-header></app-header>
+  </header>
+  <main>
+    <app-search></app-search>
+    <article>
+      <app-data></app-data>
+    </article>
+  </main>
+</div>

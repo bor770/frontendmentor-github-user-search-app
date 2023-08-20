@@ -1,0 +1,27 @@
+.container {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+}
+
+.devfinder {
+  font-size: 1.62rem;
+}
+
+.other-theme {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: 1rem;
+}
+
+.theme {
+  font-size: 0.81rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
