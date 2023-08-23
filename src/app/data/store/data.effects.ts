@@ -8,12 +8,12 @@ import * as DataActions from './data.actions';
 
 @Injectable()
 export class DataEffects {
-  initalUsername = `octocat`;
+  initalUserName = `octocat`;
 
   fetchInitialUser = createEffect(() => {
     return this.actions$.pipe(
       ofType(rootEffectsInit),
-      map(() => DataActions.fetchUser({ username: this.initalUsername }))
+      map(() => DataActions.fetchUser({ userName: this.initalUserName }))
     );
   });
 
@@ -22,7 +22,7 @@ export class DataEffects {
       ofType(DataActions.fetchUser),
       switchMap((fetchUserAction) =>
         this.http
-          .get<User>(`https://api.github.com/users/${fetchUserAction.username}`)
+          .get<User>(`https://api.github.com/users/${fetchUserAction.userName}`)
           .pipe(map((user) => DataActions.setUser({ user })))
       )
     );

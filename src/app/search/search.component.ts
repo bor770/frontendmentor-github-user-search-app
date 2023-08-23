@@ -1,11 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { LetDirective } from '@ngrx/component';
 
 import { BaseComponent } from '../shared/base/base.component';
+import * as DataActions from '../data/store/data.actions';
 
 @Component({
-  imports: [CommonModule, LetDirective],
+  imports: [CommonModule, LetDirective, ReactiveFormsModule],
   selector: 'app-search',
   standalone: true,
   styleUrls: [
@@ -15,4 +22,22 @@ import { BaseComponent } from '../shared/base/base.component';
   ],
   templateUrl: './search.component.html',
 })
-export class SearchComponent extends BaseComponent {}
+export class SearchComponent extends BaseComponent implements OnInit {
+  form: FormGroup;
+
+  ngOnInit(): void {
+    super.ngOnInit();
+
+    this.form = new FormGroup({
+      userName: new FormControl(null, Validators.required),
+    });
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      this.store.dispatch(
+        DataActions.fetchUser({ userName: this.form.value.userName })
+      );
+    }
+  }
+}

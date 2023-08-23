@@ -1,3 +1,7 @@
+.dark form {
+  background-color: var(--color-dark-4);
+}
+
 .dark input {
   color: var(--color-dark-2);
 }

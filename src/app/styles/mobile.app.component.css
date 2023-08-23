@@ -1,3 +1,7 @@
 .mobile {
   padding: 1.94rem 1.5rem 4.94rem;
 }
+
+.mobile app-search {
+  margin-bottom: 1rem;
+}

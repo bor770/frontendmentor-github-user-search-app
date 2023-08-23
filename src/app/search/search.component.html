@@ -2,9 +2,13 @@
   *ngrxLet="{ theme: theme$, width: width$ } as observables"
   [ngClass]="[observables.theme, observables.width]"
 >
-  <form>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <img src="../../assets/images/icon-search.svg" alt="Search" />
-    <input placeholder="Search GitHub username…" type="text" />
+    <input
+      formControlName="userName"
+      placeholder="Search GitHub username…"
+      type="text"
+    />
     <button type="submit">Search</button>
   </form>
 </div>

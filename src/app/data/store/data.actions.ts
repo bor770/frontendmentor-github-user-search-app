@@ -4,6 +4,6 @@ import { User } from '../data.model';
 
 export const fetchUser = createAction(
   `[Data] Fetch User`,
-  props<{ username: string }>()
+  props<{ userName: string }>()
 );
 export const setUser = createAction(`[Data] Set User`, props<{ user: User }>());

@@ -1,6 +1,9 @@
+:host {
+  display: block;
+}
+
 form {
   align-items: center;
-  background-color: var(--color-dark-4);
   border-radius: 15px;
   display: flex;
 }
@@ -13,6 +16,15 @@ input {
 }
 
 button {
+  background-color: var(--color-1);
   border: none;
   border-radius: 10px;
+  color: var(--color-dark-2);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #60abff;
 }
