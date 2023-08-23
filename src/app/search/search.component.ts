@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { LetDirective } from '@ngrx/component';
+
+import { BaseComponent } from '../shared/base/base.component';
 
 @Component({
+  imports: [CommonModule, LetDirective],
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule],
+  styleUrls: [
+    './styles/search.component.css',
+    `./styles/dark.search.component.css`,
+    `./styles/mobile.search.component.css`,
+  ],
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
 })
-export class SearchComponent {
-
-}
+export class SearchComponent extends BaseComponent {}

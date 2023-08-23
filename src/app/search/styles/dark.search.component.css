@@ -1,0 +1,7 @@
+.dark input {
+  color: var(--color-dark-2);
+}
+
+.dark input::placeholder {
+  color: var(--color-dark-2);
+}

@@ -10,10 +10,15 @@ import * as ThemeActions from '../shared/theme/store/theme.actions';
   imports: [CommonModule, LetDirective],
   selector: 'app-header',
   standalone: true,
-  styleUrls: ['./styles/header.component.css'],
+  styleUrls: [
+    './styles/header.component.css',
+    `./styles/dark.header.component.css`,
+  ],
   templateUrl: './header.component.html',
 })
 export class HeaderComponent extends BaseComponent {
+  iconHoverStatus = false;
+
   otherTheme(theme: Theme): Theme {
     return theme === `dark` ? `light` : `dark`;
   }
@@ -23,13 +28,19 @@ export class HeaderComponent extends BaseComponent {
   }
 
   otherThemeImgSrc(theme: Theme) {
-    return `../../assets/images/icon-${this.otherThemeIcon(theme)}.svg`;
+    return `../../assets/images/icon-${this.otherThemeIcon(theme)}${
+      this.iconHoverStatus ? '-hover' : ''
+    }.svg`;
   }
 
   otherThemeImgAlt(theme: Theme) {
     const otherThemeIcon = this.otherThemeIcon(theme);
 
     return `${otherThemeIcon[0].toUpperCase()}${otherThemeIcon.slice(1)}`;
+  }
+
+  toggleIconHoverStatus() {
+    this.iconHoverStatus = !this.iconHoverStatus;
   }
 
   onToggleTheme() {

@@ -1,0 +1,18 @@
+form {
+  align-items: center;
+  background-color: var(--color-dark-4);
+  border-radius: 15px;
+  display: flex;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  margin-right: auto;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+}

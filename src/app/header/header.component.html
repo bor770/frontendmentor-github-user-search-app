@@ -9,6 +9,8 @@
     tabindex="0"
     (click)="onToggleTheme()"
     (keydown.enter)="onToggleTheme()"
+    (mouseenter)="toggleIconHoverStatus()"
+    (mouseleave)="toggleIconHoverStatus()"
   >
     <span class="theme">{{ otherTheme(observables.theme) }}</span>
     <img
