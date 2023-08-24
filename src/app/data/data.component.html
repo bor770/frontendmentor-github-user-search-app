@@ -7,7 +7,7 @@
     <img [src]="user.avatar_url" alt="Avatar" />
     <header>
       <div class="name">
-        <span class="name">{{ user.name }}</span>
+        <span class="name">{{ user.name || user.login }}</span>
         <span class="login">@{{ user.login }}</span>
       </div>
       <span class="created_at"
@@ -33,7 +33,7 @@
             [alt]="iconName"
           />
           <span class="value">{{
-            user[footerItem.key] ?? "Not Available"
+            user[footerItem.key] || "Not Available"
           }}</span>
         </li>
       </ul>

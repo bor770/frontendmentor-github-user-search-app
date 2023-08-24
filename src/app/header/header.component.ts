@@ -33,17 +33,11 @@ export class HeaderComponent extends BaseComponent {
     }.svg`;
   }
 
-  otherThemeImgAlt(theme: Theme) {
-    const otherThemeIcon = this.otherThemeIcon(theme);
-
-    return `${otherThemeIcon[0].toUpperCase()}${otherThemeIcon.slice(1)}`;
+  onToggleTheme() {
+    this.store.dispatch(ThemeActions.toggle());
   }
 
   toggleIconHoverStatus() {
     this.iconHoverStatus = !this.iconHoverStatus;
-  }
-
-  onToggleTheme() {
-    this.store.dispatch(ThemeActions.toggle());
   }
 }
