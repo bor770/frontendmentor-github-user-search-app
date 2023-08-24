@@ -27,14 +27,33 @@
     </section>
     <footer>
       <ul>
-        <li *ngFor="let footerItem of footer">
+        <!-- <li *ngFor="let footerItem of footer">
           <img
             [src]="'../../assets/images/icon-' + footerItem.iconName + '.svg'"
-            [alt]="iconName"
+            [alt]="footerItem.iconName"
           />
           <span class="value">{{
             user[footerItem.key] || "Not Available"
           }}</span>
+        </li> -->
+        <li>
+          <img src="../../assets/images/icon-location.svg" alt="location" />
+          <span class="value">{{ user.location || "Not Available" }}</span>
+        </li>
+        <li>
+          <img src="../../assets/images/icon-website.svg" alt="website" />
+          <a *ngIf="user.blog">{{ user.blog }}</a>
+          <span *ngIf="!user.blog" class="value">Not Available</span>
+        </li>
+        <li>
+          <img src="../../assets/images/icon-twitter.svg" alt="twitter" />
+          <a *ngIf="user.blog">{{ user.location }}</a>
+          <span *ngIf="!user.blog" class="value">Not Available</span>
+        </li>
+        <li>
+          <img src="../../assets/images/icon-website.svg" alt="website" />
+          <a *ngIf="user.blog">{{ user.location }}</a>
+          <span *ngIf="!user.blog" class="value">Not Available</span>
         </li>
       </ul>
     </footer>

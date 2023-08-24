@@ -37,4 +37,8 @@ export class DataComponent extends BaseComponent implements OnInit {
 
     this.user$ = this.store.select(fromRoot.selectDataState);
   }
+
+  valueWithDefault(value: string) {
+    return value || `Not Available`;
+  }
 }
