@@ -11,8 +11,10 @@ form {
 input {
   background-color: transparent;
   border: none;
+  caret-color: var(--color-1);
   font-family: inherit;
   margin-right: auto;
+  outline: none;
 }
 
 button {

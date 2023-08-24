@@ -32,7 +32,9 @@
             [src]="'../../assets/images/icon-' + footerItem.iconName + '.svg'"
             [alt]="iconName"
           />
-          <span class="value">{{ user[footerItem.key] }}</span>
+          <span class="value">{{
+            user[footerItem.key] ?? "Not Available"
+          }}</span>
         </li>
       </ul>
     </footer>
