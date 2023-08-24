@@ -1,1 +1,40 @@
-<p>data works!</p>
+<div
+  *ngrxLet="{ theme: theme$, width: width$ } as observables"
+  class="container"
+  [ngClass]="[observables.theme, observables.width]"
+>
+  <ng-container *ngIf="user$ | async as user">
+    <img [src]="user.avatar_url" alt="Avatar" />
+    <header>
+      <div class="name">
+        <span class="name">{{ user.name }}</span>
+        <span class="login">@{{ user.login }}</span>
+      </div>
+      <span class="created_at"
+        >Joined {{ user.created_at | date : "d MMM y" }}</span
+      >
+    </header>
+    <section class="bio">
+      <p>{{ user.bio ?? "This profile has no bio" }}</p>
+    </section>
+    <section class="stats">
+      <ul>
+        <li *ngFor="let stat of stats">
+          <span class="title">{{ stat.displayed }}</span>
+          <span class="number">{{ user[stat.key] }}</span>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <ul>
+        <li *ngFor="let footerItem of footer">
+          <img
+            [src]="'../../assets/images/icon-' + footerItem.iconName + '.svg'"
+            [alt]="iconName"
+          />
+          <span class="value">{{ user[footerItem.key] }}</span>
+        </li>
+      </ul>
+    </footer>
+  </ng-container>
+</div>

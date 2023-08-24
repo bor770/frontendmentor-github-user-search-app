@@ -6,8 +6,14 @@ export type User = {
   created_at: string;
   followers: number;
   following: number;
-  location: number;
+  location: string;
+  login: string;
+  message: string;
   name: string;
   public_repos: number;
   twitter_username: string;
 };
+
+export type StatsData = { displayed: string; key: string }[];
+
+export type FooterData = { iconName: string; key: string }[];
