@@ -1,3 +1,45 @@
 .container {
   border-radius: 15px;
+  display: grid;
+}
+
+.avatar {
+  border-radius: 50%;
+  justify-self: stretch;
+}
+
+.name {
+  display: block;
+  font-weight: 700;
+}
+
+.login {
+  color: var(--color-1);
+  display: block;
+}
+
+.created_at {
+  display: block;
+}
+
+.stats {
+  border-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.stats-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.number {
+  font-weight: 700;
 }

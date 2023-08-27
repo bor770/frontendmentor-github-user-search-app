@@ -4,9 +4,9 @@
   [ngClass]="[observables.theme, observables.width]"
 >
   <ng-container *ngIf="user$ | async as user">
-    <img [src]="user.avatar_url" alt="Avatar" />
+    <img class="avatar" [src]="user.avatar_url" alt="Avatar" />
     <header>
-      <div class="name">
+      <div class="name-login">
         <span class="name">{{ user.name || user.login }}</span>
         <span class="login">@{{ user.login }}</span>
       </div>
@@ -18,8 +18,8 @@
       <p>{{ user.bio ?? "This profile has no bio" }}</p>
     </section>
     <section class="stats">
-      <ul>
-        <li *ngFor="let stat of stats">
+      <ul class="stats-details">
+        <li *ngFor="let stat of stats" class="stat-item">
           <span class="title">{{ stat.displayed }}</span>
           <span class="number">{{ user[stat.key] }}</span>
         </li>
@@ -42,18 +42,28 @@
         </li>
         <li>
           <img src="../../assets/images/icon-website.svg" alt="website" />
-          <a *ngIf="user.blog">{{ user.blog }}</a>
+          <a *ngIf="user.blog" [href]="user.blog">{{ user.blog }}</a>
           <span *ngIf="!user.blog" class="value">Not Available</span>
         </li>
         <li>
           <img src="../../assets/images/icon-twitter.svg" alt="twitter" />
-          <a *ngIf="user.blog">{{ user.location }}</a>
-          <span *ngIf="!user.blog" class="value">Not Available</span>
+          <a
+            *ngIf="user.twitter_username"
+            [href]="'https://twitter.com/' + user.twitter_username"
+            >{{ user.twitter_username }}</a
+          >
+          <span *ngIf="!user.twitter_username" class="value"
+            >Not Available</span
+          >
         </li>
         <li>
-          <img src="../../assets/images/icon-website.svg" alt="website" />
-          <a *ngIf="user.blog">{{ user.location }}</a>
-          <span *ngIf="!user.blog" class="value">Not Available</span>
+          <img src="../../assets/images/icon-company.svg" alt="company" />
+          <a
+            *ngIf="user.company"
+            [href]="'https://github.com/' + user.company.slice(1)"
+            >{{ user.company }}</a
+          >
+          <span *ngIf="!user.company" class="value">Not Available</span>
         </li>
       </ul>
     </footer>

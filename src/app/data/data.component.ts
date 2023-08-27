@@ -4,7 +4,7 @@ import { LetDirective } from '@ngrx/component';
 import { Observable } from 'rxjs';
 
 import { BaseComponent } from '../shared/base/base.component';
-import { FooterData, StatsData, User } from './data.model';
+import { StatsData, User } from './data.model';
 import * as fromRoot from '../store/app.reducer';
 
 @Component({
@@ -19,12 +19,6 @@ import * as fromRoot from '../store/app.reducer';
   templateUrl: './data.component.html',
 })
 export class DataComponent extends BaseComponent implements OnInit {
-  footer: FooterData = [
-    { iconName: `location`, key: `location` },
-    { iconName: `website`, key: `blog` },
-    { iconName: `twitter`, key: `twitter_username` },
-    { iconName: `company`, key: `company` },
-  ];
   stats: StatsData = [
     { displayed: `Repos`, key: `public_repos` },
     { displayed: `Followers`, key: `followers` },
@@ -35,10 +29,6 @@ export class DataComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     super.ngOnInit();
 
-    this.user$ = this.store.select(fromRoot.selectDataState);
-  }
-
-  valueWithDefault(value: string) {
-    return value || `Not Available`;
+    this.user$ = this.store.select(fromRoot.selectDataUser);
   }
 }

@@ -1,0 +1,61 @@
+.mobile.container {
+  column-gap: 1.22rem;
+  font-size: 0.81rem;
+  grid-template-areas:
+    "avatar header"
+    "bio    bio   "
+    "stats  stats "
+    "footer footer";
+  grid-template-columns: 4.37rem auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.mobile .avatar {
+  grid-area: avatar;
+  margin-bottom: 2.06rem;
+}
+
+.mobile header {
+  grid-area: header;
+}
+
+.mobile .name-login {
+  margin-bottom: 6px;
+}
+
+.mobile .name {
+  font-size: 1rem;
+}
+
+.mobile .login {
+  font-size: 0.81rem;
+}
+
+.mobile .created_at {
+  font-size: 0.81rem;
+}
+
+.mobile .bio {
+  grid-area: bio;
+  line-height: 192.31%;
+  margin-bottom: 1.44rem;
+}
+
+.mobile .stats {
+  grid-area: stats;
+  padding: 1.12rem 0.88rem 1.19rem 0.94rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobile .stat-item {
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile .title {
+  font-size: 0.69rem;
+}
+
+.mobile footer {
+  grid-area: footer;
+}

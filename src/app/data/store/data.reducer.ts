@@ -4,11 +4,15 @@ import { User } from '../data.model';
 
 import * as DataActions from './data.actions';
 
-export type State = User;
+export interface State {
+  user: User;
+}
 
-const initialState: State = null;
+const initialState: State = { user: null };
 
 export const dataReducer = createReducer(
   initialState,
-  on(DataActions.setUser, (state, { user }): State => ({ ...state, ...user }))
+  on(DataActions.setUser, (state, { user }): State => ({ ...state, user }))
 );
+
+export const getUser = (state: State) => state.user;

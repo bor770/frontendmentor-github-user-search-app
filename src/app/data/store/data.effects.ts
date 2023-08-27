@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType, rootEffectsInit } from '@ngrx/effects';
-import { map, switchMap } from 'rxjs';
+import { catchError, map, of, switchMap } from 'rxjs';
 
 import { User } from '../data.model';
 import * as DataActions from './data.actions';
@@ -23,7 +23,10 @@ export class DataEffects {
       switchMap((fetchUserAction) =>
         this.http
           .get<User>(`https://api.github.com/users/${fetchUserAction.userName}`)
-          .pipe(map((user) => DataActions.setUser({ user })))
+          .pipe(
+            map((user) => DataActions.setUser({ user })),
+            catchError(() => of(DataActions.setUser({ user: null })))
+          )
       )
     );
   });

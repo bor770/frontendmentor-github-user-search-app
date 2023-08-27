@@ -1,3 +1,7 @@
 .dark.container {
   background-color: var(--color-dark-4);
 }
+
+.dark .stats {
+  background-color: var(--color-dark-3);
+}

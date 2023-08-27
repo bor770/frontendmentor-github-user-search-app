@@ -20,7 +20,9 @@ export const appReducer: ActionReducerMap<AppState> = {
   theme: fromTheme.themeReducer,
 };
 
-export const selectDataState = createFeatureSelector<fromData.State>(`data`);
+const selectDataState = createFeatureSelector<fromData.State>(`data`);
+
+export const selectDataUser = createSelector(selectDataState, fromData.getUser);
 
 const selectLayout = createFeatureSelector<fromLayout.State>(`layout`);
 
