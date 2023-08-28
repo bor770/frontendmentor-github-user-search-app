@@ -4,11 +4,12 @@ import { LetDirective } from '@ngrx/component';
 import { Observable } from 'rxjs';
 
 import { BaseComponent } from '../shared/base/base.component';
+import { FooterImgComponent } from './footer-img/footer-img.component';
 import { StatsData, User } from './data.model';
 import * as fromRoot from '../store/app.reducer';
 
 @Component({
-  imports: [CommonModule, LetDirective],
+  imports: [CommonModule, LetDirective, FooterImgComponent],
   selector: 'app-data',
   standalone: true,
   styleUrls: [

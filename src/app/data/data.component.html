@@ -27,26 +27,27 @@
     </section>
     <footer>
       <ul>
-        <!-- <li *ngFor="let footerItem of footer">
-          <img
-            [src]="'../../assets/images/icon-' + footerItem.iconName + '.svg'"
-            [alt]="footerItem.iconName"
-          />
-          <span class="value">{{
-            user[footerItem.key] || "Not Available"
-          }}</span>
-        </li> -->
         <li>
-          <img src="../../assets/images/icon-location.svg" alt="location" />
+          <app-footer-img item="location"></app-footer-img>
           <span class="value">{{ user.location || "Not Available" }}</span>
         </li>
         <li>
-          <img src="../../assets/images/icon-website.svg" alt="website" />
+          <img
+            alt="website"
+            [src]="
+              '../../assets/images/icon-website-' + observables.theme + '.svg'
+            "
+          />
           <a *ngIf="user.blog" [href]="user.blog">{{ user.blog }}</a>
           <span *ngIf="!user.blog" class="value">Not Available</span>
         </li>
         <li>
-          <img src="../../assets/images/icon-twitter.svg" alt="twitter" />
+          <img
+            alt="twitter"
+            [src]="
+              '../../assets/images/icon-twitter-' + observables.theme + '.svg'
+            "
+          />
           <a
             *ngIf="user.twitter_username"
             [href]="'https://twitter.com/' + user.twitter_username"
@@ -57,7 +58,12 @@
           >
         </li>
         <li>
-          <img src="../../assets/images/icon-company.svg" alt="company" />
+          <img
+            alt="company"
+            [src]="
+              '../../assets/images/icon-company-' + observables.theme + '.svg'
+            "
+          />
           <a
             *ngIf="user.company"
             [href]="'https://github.com/' + user.company.slice(1)"
