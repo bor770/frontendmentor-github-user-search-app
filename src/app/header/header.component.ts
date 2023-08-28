@@ -6,8 +6,6 @@ import { BaseComponent } from '../shared/base/base.component';
 import { Theme } from '../shared/theme/theme.model';
 import * as ThemeActions from '../shared/theme/store/theme.actions';
 
-import icon from '../../assets/images/icon-sun.svg';
-
 @Component({
   imports: [CommonModule, LetDirective],
   selector: 'app-header',
@@ -19,12 +17,7 @@ import icon from '../../assets/images/icon-sun.svg';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent extends BaseComponent {
-  icon = icon;
   iconHoverStatus = false;
-
-  // ngOnInit() {
-  //   console.log(this.icon);
-  // }
 
   otherTheme(theme: Theme): Theme {
     return theme === `dark` ? `light` : `dark`;
