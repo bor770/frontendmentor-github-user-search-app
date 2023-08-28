@@ -32,22 +32,12 @@
           <span class="value">{{ user.location || "Not Available" }}</span>
         </li>
         <li>
-          <img
-            alt="website"
-            [src]="
-              '../../assets/images/icon-website-' + observables.theme + '.svg'
-            "
-          />
+          <app-footer-img item="website"></app-footer-img>
           <a *ngIf="user.blog" [href]="user.blog">{{ user.blog }}</a>
           <span *ngIf="!user.blog" class="value">Not Available</span>
         </li>
         <li>
-          <img
-            alt="twitter"
-            [src]="
-              '../../assets/images/icon-twitter-' + observables.theme + '.svg'
-            "
-          />
+          <app-footer-img item="twitter"></app-footer-img>
           <a
             *ngIf="user.twitter_username"
             [href]="'https://twitter.com/' + user.twitter_username"
@@ -58,12 +48,7 @@
           >
         </li>
         <li>
-          <img
-            alt="company"
-            [src]="
-              '../../assets/images/icon-company-' + observables.theme + '.svg'
-            "
-          />
+          <app-footer-img item="company"></app-footer-img>
           <a
             *ngIf="user.company"
             [href]="'https://github.com/' + user.company.slice(1)"
