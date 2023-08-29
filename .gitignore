@@ -43,3 +43,8 @@ Thumbs.db
 
 github-user-search-app
 github-user-search-app-figma
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "frontendmentor-github-user": {
+      "hosting": {
+        "github-user-search-app": [
+          "frontendmentor-github-user"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "frontendmentor-github-user"
+  }
+}

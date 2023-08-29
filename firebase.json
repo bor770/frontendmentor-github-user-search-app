@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "github-user-search-app",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
