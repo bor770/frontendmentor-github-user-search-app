@@ -1,0 +1,76 @@
+.desktop.container {
+  column-gap: 2.31rem;
+  font-size: 0.94rem;
+  grid-template-areas:
+    "avatar header"
+    "avatar bio   "
+    ".      stats "
+    ".      footer";
+  grid-template-columns: 7.31rem auto;
+  padding: 3rem;
+}
+
+.desktop header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.desktop .name {
+  font-size: 1.62rem;
+  margin-block: -4px 2px;
+}
+
+.desktop .login {
+  font-size: 1rem;
+}
+
+.desktop .created_at {
+  margin-top: 4px;
+}
+
+.desktop .bio {
+  line-height: 166.67%;
+  margin-bottom: 2rem;
+}
+
+.desktop .stats {
+  margin-bottom: 2.31rem;
+  padding: 0.94rem 5.19rem 1.06rem 2rem;
+}
+
+.desktop .stats-details {
+  justify-content: space-between;
+}
+
+.desktop .title {
+  font-size: 0.81rem;
+}
+
+.desktop .number {
+  font-size: 1.37rem;
+}
+
+.desktop .footer-items {
+  display: grid;
+  grid-template-areas:
+    "location twitter"
+    "website  company";
+  row-gap: 1.19rem;
+}
+
+.desktop .location {
+  grid-area: location;
+}
+
+.desktop .website {
+  grid-area: website;
+}
+
+.desktop .twitter {
+  grid-area: twitter;
+}
+
+.desktop .company {
+  grid-area: company;
+}

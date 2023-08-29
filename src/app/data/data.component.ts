@@ -18,6 +18,7 @@ import { FooterItemComponent } from './footer-item/footer-item.component';
     `./styles/light.data.component.css`,
     `./styles/mobile.data.component.css`,
     `./styles/tablet.data.component.css`,
+    `./styles/desktop.data.component.css`,
   ],
   templateUrl: './data.component.html',
 })

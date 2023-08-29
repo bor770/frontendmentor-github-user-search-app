@@ -1,0 +1,20 @@
+.desktop form {
+  height: 4.31rem;
+  padding-inline: 2rem 0.62rem;
+}
+
+.desktop img {
+  margin-right: 1.5rem;
+  width: 1.5rem;
+}
+
+.desktop input {
+  font-size: 1.12rem;
+  width: 15.87rem;
+}
+
+.desktop button {
+  font-size: 1rem;
+  height: 3.12rem;
+  width: 6.62rem;
+}

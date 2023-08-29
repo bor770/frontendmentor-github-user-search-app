@@ -21,6 +21,7 @@ import * as DataActions from '../data/store/data.actions';
     `./styles/light.search.component.css`,
     `./styles/mobile.search.component.css`,
     `./styles/tablet.search.component.css`,
+    `./styles/desktop.search.component.css`,
   ],
   templateUrl: './search.component.html',
 })
