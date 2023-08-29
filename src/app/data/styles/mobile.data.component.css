@@ -1,6 +1,5 @@
 .mobile.container {
   column-gap: 1.22rem;
-  /* font-size: 0.81rem; */
   grid-template-areas:
     "avatar header"
     "bio    bio   "

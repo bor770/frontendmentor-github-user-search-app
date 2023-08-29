@@ -7,7 +7,9 @@ export interface State {
   theme: Theme;
 }
 
-const initialState: State = { theme: `dark` };
+const initialState: State = {
+  theme: matchMedia(`(prefers-color-scheme: dark)`).matches ? `dark` : `light`,
+};
 
 export const themeReducer = createReducer(
   initialState,

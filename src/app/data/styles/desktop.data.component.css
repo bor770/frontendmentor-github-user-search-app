@@ -1,6 +1,5 @@
 .desktop.container {
   column-gap: 2.31rem;
-  font-size: 0.94rem;
   grid-template-areas:
     "avatar header"
     "avatar bio   "
