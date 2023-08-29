@@ -1,0 +1,12 @@
+<div
+  *ngrxLet="{ theme: theme$, user: user$ } as observables"
+  [ngClass]="{ 'not-available': !observables.user[key] }"
+>
+  <img
+    [alt]="item"
+    [src]="
+      '../../../assets/images/icon-' + item + '-' + observables.theme + '.svg'
+    "
+  />
+  <ng-content></ng-content>
+</div>

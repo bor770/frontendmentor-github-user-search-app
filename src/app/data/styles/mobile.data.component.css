@@ -59,3 +59,9 @@
 .mobile footer {
   grid-area: footer;
 }
+
+.mobile .footer-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
