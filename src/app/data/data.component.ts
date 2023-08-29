@@ -15,6 +15,7 @@ import { FooterItemComponent } from './footer-item/footer-item.component';
   styleUrls: [
     './styles/data.component.css',
     `./styles/dark.data.component.css`,
+    `./styles/light.data.component.css`,
     `./styles/mobile.data.component.css`,
   ],
   templateUrl: './data.component.html',

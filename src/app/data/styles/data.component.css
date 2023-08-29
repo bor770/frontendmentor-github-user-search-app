@@ -49,6 +49,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .no-bio {
   opacity: 0.75;
 }
