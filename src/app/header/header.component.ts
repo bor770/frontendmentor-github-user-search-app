@@ -13,6 +13,7 @@ import * as ThemeActions from '../shared/theme/store/theme.actions';
   styleUrls: [
     './styles/header.component.css',
     `./styles/dark.header.component.css`,
+    `./styles/light.header.component.css`,
   ],
   templateUrl: './header.component.html',
 })

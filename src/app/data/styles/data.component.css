@@ -48,3 +48,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
+.no-bio {
+  opacity: 0.75;
+}

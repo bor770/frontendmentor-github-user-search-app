@@ -14,7 +14,7 @@
         >Joined {{ user.created_at | date : "d MMM y" }}</span
       >
     </header>
-    <section class="bio">
+    <section class="bio" [ngClass]="{ 'no-bio': !user.bio }">
       <p>{{ user.bio ?? "This profile has no bio" }}</p>
     </section>
     <section class="stats">
