@@ -18,6 +18,7 @@ import * as DataActions from '../data/store/data.actions';
   styleUrls: [
     './styles/search.component.css',
     `./styles/dark.search.component.css`,
+    `./styles/light.search.component.css`,
     `./styles/mobile.search.component.css`,
   ],
   templateUrl: './search.component.html',
