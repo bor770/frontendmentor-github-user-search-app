@@ -20,6 +20,7 @@ import * as DataActions from '../data/store/data.actions';
     `./styles/dark.search.component.css`,
     `./styles/light.search.component.css`,
     `./styles/mobile.search.component.css`,
+    `./styles/tablet.search.component.css`,
   ],
   templateUrl: './search.component.html',
 })
