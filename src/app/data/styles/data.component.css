@@ -5,7 +5,12 @@
 
 .avatar {
   border-radius: 50%;
+  grid-area: avatar;
   justify-self: stretch;
+}
+
+header {
+  grid-area: header;
 }
 
 .name {
@@ -22,8 +27,13 @@
   display: block;
 }
 
+.bio {
+  grid-area: bio;
+}
+
 .stats {
   border-radius: 10px;
+  grid-area: stats;
 }
 
 ul {
@@ -37,11 +47,14 @@ ul {
 .stat-item {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .number {
   font-weight: 700;
+}
+
+footer {
+  grid-area: footer;
 }
 
 a {

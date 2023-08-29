@@ -11,10 +11,7 @@ import * as fromRoot from '../../store/app.reducer';
   imports: [CommonModule, LetDirective],
   selector: 'app-footer-item',
   standalone: true,
-  styleUrls: [
-    './styles/footer-item.component.css',
-    `./styles/mobile.footer-item.component.css`,
-  ],
+  styleUrls: ['./styles/footer-item.component.css'],
   templateUrl: './footer-item.component.html',
 })
 export class FooterItemComponent extends BaseComponent implements OnInit {

@@ -27,41 +27,56 @@
     </section>
     <footer>
       <ul class="footer-items">
-        <li>
-          <app-footer-item item="location">
-            <span class="value">{{ user.location || "Not Available" }}</span>
+        <li [ngClass]="footerItems[0].item">
+          <app-footer-item [item]="footerItems[0].item">
+            <span class="value">{{
+              user[footerItems[0].key] || "Not Available"
+            }}</span>
           </app-footer-item>
         </li>
-        <li>
-          <app-footer-item item="website" key="blog">
-            <a *ngIf="user.blog" target="_blank" [href]="user.blog">{{
-              user.blog
-            }}</a>
-            <span *ngIf="!user.blog" class="value">Not Available</span>
-          </app-footer-item>
-        </li>
-        <li>
-          <app-footer-item item="twitter" key="twitter_username">
+        <li [ngClass]="footerItems[1].item">
+          <app-footer-item
+            [item]="footerItems[1].item"
+            [key]="footerItems[1].key"
+          >
             <a
-              *ngIf="user.twitter_username"
+              *ngIf="user[footerItems[1].key]"
               target="_blank"
-              [href]="'https://twitter.com/' + user.twitter_username"
-              >{{ user.twitter_username }}</a
+              [href]="user[footerItems[1].key]"
+              >{{ user.blog }}</a
             >
-            <span *ngIf="!user.twitter_username" class="value"
+            <span *ngIf="!user[footerItems[1].key]" class="value"
               >Not Available</span
             >
           </app-footer-item>
         </li>
-        <li>
-          <app-footer-item item="company">
+        <li [ngClass]="footerItems[2].item">
+          <app-footer-item
+            [item]="footerItems[2].item"
+            [key]="footerItems[2].key"
+          >
             <a
-              *ngIf="user.company"
+              *ngIf="user[footerItems[2].key]"
               target="_blank"
-              [href]="'https://github.com/' + user.company.slice(1)"
-              >{{ user.company }}</a
+              [href]="'https://twitter.com/' + user[footerItems[2].key]"
+              >{{ user[footerItems[2].key] }}</a
             >
-            <span *ngIf="!user.company" class="value">Not Available</span>
+            <span *ngIf="!user[footerItems[2].key]" class="value"
+              >Not Available</span
+            >
+          </app-footer-item>
+        </li>
+        <li [ngClass]="footerItems[3].item">
+          <app-footer-item [item]="footerItems[3].item">
+            <a
+              *ngIf="user[footerItems[3].key]"
+              target="_blank"
+              [href]="'https://github.com/' + user[footerItems[3].key].slice(1)"
+              >{{ user[footerItems[3].key] }}</a
+            >
+            <span *ngIf="!user[footerItems[3].key]" class="value"
+              >Not Available</span
+            >
           </app-footer-item>
         </li>
       </ul>

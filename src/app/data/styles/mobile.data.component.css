@@ -11,12 +11,7 @@
 }
 
 .mobile .avatar {
-  grid-area: avatar;
   margin-bottom: 2.06rem;
-}
-
-.mobile header {
-  grid-area: header;
 }
 
 .mobile .name-login {
@@ -36,28 +31,23 @@
 }
 
 .mobile .bio {
-  grid-area: bio;
   line-height: 192.31%;
   margin-bottom: 1.44rem;
 }
 
 .mobile .stats {
-  grid-area: stats;
-  padding: 1.12rem 0.88rem 1.19rem 0.94rem;
   margin-bottom: 1.5rem;
+  padding: 1.12rem 0.88rem 1.19rem 0.94rem;
 }
 
 .mobile .stat-item {
   align-items: center;
   gap: 8px;
+  width: 100%;
 }
 
 .mobile .title {
   font-size: 0.69rem;
-}
-
-.mobile footer {
-  grid-area: footer;
 }
 
 .mobile .footer-items {

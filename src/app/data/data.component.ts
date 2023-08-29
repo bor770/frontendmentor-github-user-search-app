@@ -4,7 +4,7 @@ import { LetDirective } from '@ngrx/component';
 import { Observable } from 'rxjs';
 
 import { BaseComponent } from '../shared/base/base.component';
-import { StatsData, User } from './data.model';
+import { FooterItems, StatsData, User } from './data.model';
 import * as fromRoot from '../store/app.reducer';
 import { FooterItemComponent } from './footer-item/footer-item.component';
 
@@ -17,10 +17,17 @@ import { FooterItemComponent } from './footer-item/footer-item.component';
     `./styles/dark.data.component.css`,
     `./styles/light.data.component.css`,
     `./styles/mobile.data.component.css`,
+    `./styles/tablet.data.component.css`,
   ],
   templateUrl: './data.component.html',
 })
 export class DataComponent extends BaseComponent implements OnInit {
+  footerItems: FooterItems = [
+    { item: `location`, key: `location` },
+    { item: `website`, key: `blog` },
+    { item: `twitter`, key: `twitter_username` },
+    { item: `company`, key: `company` },
+  ];
   stats: StatsData = [
     { displayed: `Repos`, key: `public_repos` },
     { displayed: `Followers`, key: `followers` },

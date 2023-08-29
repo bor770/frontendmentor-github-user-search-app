@@ -1,0 +1,74 @@
+.tablet.container {
+  column-gap: 2.56rem;
+  font-size: 0.94rem;
+  grid-template-areas:
+    "avatar header"
+    "bio    bio   "
+    "stats  stats "
+    "footer footer";
+  grid-template-columns: 7.31rem auto;
+  padding: 2.5rem;
+}
+
+.tablet .avatar {
+  margin-bottom: 1.5rem;
+}
+
+.tablet .name-login {
+  margin-bottom: 4px;
+}
+
+.tablet .name {
+  font-size: 1.62rem;
+  margin-block: 12px 2px;
+}
+
+.tablet .login {
+  font-size: 1rem;
+}
+
+.tablet .bio {
+  line-height: 166.67%;
+  margin-bottom: 2rem;
+}
+
+.tablet .stats {
+  margin-bottom: 1.88rem;
+  padding: 0.94rem 6rem 1.06rem 2rem;
+}
+
+.tablet .stats-details {
+  justify-content: space-between;
+}
+
+.tablet .title {
+  font-size: 0.81rem;
+}
+
+.tablet .number {
+  font-size: 1.37rem;
+}
+
+.tablet .footer-items {
+  display: grid;
+  grid-template-areas:
+    "location twitter"
+    "website  company";
+  row-gap: 1.31rem;
+}
+
+.tablet .location {
+  grid-area: location;
+}
+
+.tablet .website {
+  grid-area: website;
+}
+
+.tablet .twitter {
+  grid-area: twitter;
+}
+
+.tablet .company {
+  grid-area: company;
+}

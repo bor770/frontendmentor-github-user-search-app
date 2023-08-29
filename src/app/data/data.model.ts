@@ -14,3 +14,5 @@ export type User = {
 };
 
 export type StatsData = { displayed: string; key: string }[];
+
+export type FooterItems = { item: string; key?: string }[];
