@@ -22,6 +22,10 @@ export const appReducer: ActionReducerMap<AppState> = {
 
 const selectDataState = createFeatureSelector<fromData.State>(`data`);
 
+export const selectDataNotFound = createSelector(
+  selectDataState,
+  fromData.getNotFound
+);
 export const selectDataUser = createSelector(selectDataState, fromData.getUser);
 
 const selectLayout = createFeatureSelector<fromLayout.State>(`layout`);

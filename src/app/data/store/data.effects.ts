@@ -25,7 +25,7 @@ export class DataEffects {
           .get<User>(`https://api.github.com/users/${fetchUserAction.userName}`)
           .pipe(
             map((user) => DataActions.setUser({ user })),
-            catchError(() => of(DataActions.setUser({ user: null })))
+            catchError(() => of(DataActions.setNotFound()))
           )
       )
     );

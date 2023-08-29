@@ -1,7 +1,4 @@
-<div
-  *ngrxLet="{ theme: theme$, width: width$, user: user$ } as observables"
-  [ngClass]="observables.width"
->
+<div *ngrxLet="{ theme: theme$, user: user$ } as observables">
   <div
     class="container"
     [ngClass]="{ 'not-available': !observables.user[key] }"

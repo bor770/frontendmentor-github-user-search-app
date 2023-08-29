@@ -1,5 +1,9 @@
 <div
-  *ngrxLet="{ theme: theme$, width: width$ } as observables"
+  *ngrxLet="{
+    notFound: notFound$,
+    theme: theme$,
+    width: width$
+  } as observables"
   [ngClass]="[observables.theme, observables.width]"
 >
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -9,6 +13,11 @@
       placeholder="Search GitHub username…"
       type="text"
     />
+    <span
+      *ngIf="observables.notFound && observables.width === 'desktop'"
+      class="not-found"
+      >No results</span
+    >
     <button type="submit">Search</button>
   </form>
 </div>

@@ -1,6 +1,6 @@
 .tablet.container {
   column-gap: 2.56rem;
-  font-size: 0.94rem;
+  /* font-size: 0.94rem; */
   grid-template-areas:
     "avatar header"
     "bio    bio   "
