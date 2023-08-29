@@ -32,14 +32,19 @@ ul {
 
 .stats-details {
   display: flex;
-  justify-content: space-between;
 }
 
 .stat-item {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .number {
   font-weight: 700;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
 }

@@ -26,7 +26,7 @@
       </ul>
     </section>
     <footer>
-      <ul class="footer-ul">
+      <ul class="footer-items">
         <li>
           <app-footer-item item="location">
             <span class="value">{{ user.location || "Not Available" }}</span>
@@ -34,7 +34,9 @@
         </li>
         <li>
           <app-footer-item item="website" key="blog">
-            <a *ngIf="user.blog" [href]="user.blog">{{ user.blog }}</a>
+            <a *ngIf="user.blog" target="_blank" [href]="user.blog">{{
+              user.blog
+            }}</a>
             <span *ngIf="!user.blog" class="value">Not Available</span>
           </app-footer-item>
         </li>
@@ -42,6 +44,7 @@
           <app-footer-item item="twitter" key="twitter_username">
             <a
               *ngIf="user.twitter_username"
+              target="_blank"
               [href]="'https://twitter.com/' + user.twitter_username"
               >{{ user.twitter_username }}</a
             >
@@ -54,6 +57,7 @@
           <app-footer-item item="company">
             <a
               *ngIf="user.company"
+              target="_blank"
               [href]="'https://github.com/' + user.company.slice(1)"
               >{{ user.company }}</a
             >

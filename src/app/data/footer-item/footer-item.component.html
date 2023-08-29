@@ -1,12 +1,17 @@
 <div
-  *ngrxLet="{ theme: theme$, user: user$ } as observables"
-  [ngClass]="{ 'not-available': !observables.user[key] }"
+  *ngrxLet="{ theme: theme$, width: width$, user: user$ } as observables"
+  [ngClass]="observables.width"
 >
-  <img
-    [alt]="item"
-    [src]="
-      '../../../assets/images/icon-' + item + '-' + observables.theme + '.svg'
-    "
-  />
-  <ng-content></ng-content>
+  <div
+    class="container"
+    [ngClass]="{ 'not-available': !observables.user[key] }"
+  >
+    <img
+      [alt]="item"
+      [src]="
+        '../../../assets/images/icon-' + item + '-' + observables.theme + '.svg'
+      "
+    />
+    <ng-content></ng-content>
+  </div>
 </div>

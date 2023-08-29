@@ -5,3 +5,7 @@
 .dark .stats {
   background-color: var(--color-dark-3);
 }
+
+.dark a {
+  color: var(--color-dark-2);
+}

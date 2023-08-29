@@ -60,7 +60,7 @@
   grid-area: footer;
 }
 
-.mobile .footer-ul {
+.mobile .footer-items {
   display: flex;
   flex-direction: column;
   gap: 1rem;
